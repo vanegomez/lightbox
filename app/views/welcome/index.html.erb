@@ -2,6 +2,7 @@
   <h1>Welcome to LightBox</h1>
 
   <% if current_user %>
+    <%= image_tag current_user.image %>
     <h2><%= current_user.nickname %></h2>
     <%= link_to "logout", logout_path, method: :delete %>
   <% else %>
@@ -10,14 +11,3 @@
 </div>
 
 
-<!--<div class="container-fluid container-home">-->
-  <!--<div class="col-md-2"></div>-->
-  <!--<div class="col-md-8">-->
-    <!--<h1 class="home">You Are Authorized</h1>-->
-    <!--<%#= image_tag current_user.image_url, class: "img-circle img-thumbnail home-image" %>-->
-    <!--<h2 class="home"> <%#= current_user.nickname %> </h2>-->
-    <!--<h2 class="home"> <%#= current_user.email %> </h2>-->
-    <!--<%#= link_to "Logout", logout_path, method: :delete, class: "btn btn-lg btn-default btn-home" %>-->
-  <!--</div>-->
-  <!--<div class="col-md-2"></div>-->
-<!--</div>-->
