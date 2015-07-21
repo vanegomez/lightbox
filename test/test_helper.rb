@@ -20,7 +20,7 @@ class ActionDispatch::IntegrationTest
     # first, set OmniAuth to run in test mode
     OmniAuth.config.test_mode = true
     # then, provide a set of fake oauth data that
-    # omniauth will use when a user tries to authenticate:
+    # omniauth will use when a users tries to authenticate:
     OmniAuth.config.mock_auth[:instagram] = OmniAuth::AuthHash.new({
         provider: 'instagram',
         uid: "1234",

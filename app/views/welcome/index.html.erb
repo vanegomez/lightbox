@@ -1,5 +1,11 @@
 <div class="container">
-
+  <% if current_user %>
+    <h1><%= current_user.name %>'s media feed</h1>
+    <% current_user.feed.each do |feed_item| %>
+      <p><%= feed_item.user.full_name %></p>
+      <%= image_tag feed_item.images.standard_resolution.url %>
+    <% end %>
+  <% end %>
 </div>
 
 

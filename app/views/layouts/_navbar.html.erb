@@ -1,16 +1,16 @@
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">
-        LightBox
-      </a>
+      <p class="navbar-brand">
+        <%= link_to "LightBox", root_path %>
+      </p>
     </div>
 
     <ul class="nav navbar-nav navbar-right">
       <!--<li><a href="#">Link</a></li>-->
       <% if current_user %>
         <%#= image_tag current_user.image %>
-        <p class="navbar-text"><%= link_to current_user.nickname, user_path(@user) %></p>
+        <p class="navbar-text"><%= link_to current_user.nickname, user_path(current_user) %></p>
         <li><%= link_to "logout", logout_path, method: :delete %></li>
       <% else %>
         <li><%= link_to "Login", login_path %></li>
