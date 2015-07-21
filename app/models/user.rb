@@ -12,4 +12,13 @@ class User < ActiveRecord::Base
 
     user
   end
+
+  def instagram_client
+    @twitter_client ||= Twitter::REST::Client.new do |config|
+      config.consumer_key = "PuJkMZeoVaT8UCfjXhr5p0dYj"
+      config.consumer_secret = "9VGchuYmqLlxbVyu4agDrlHD9uX6tIK3KOpc55IYWwFmplE62R"
+      config.access_token = oauth_token
+      config.access_token_secret = oauth_token_secret
+    end
+  end
 end

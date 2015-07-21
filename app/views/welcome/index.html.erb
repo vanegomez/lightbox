@@ -1,13 +1,5 @@
 <div class="container">
-  <h1>Welcome to LightBox</h1>
 
-  <% if current_user %>
-    <%= image_tag current_user.image %>
-    <h2><%= current_user.nickname %></h2>
-    <%= link_to "logout", logout_path, method: :delete %>
-  <% else %>
-    <%= link_to "Login", login_path %>
-  <% end %>
 </div>
 
 
