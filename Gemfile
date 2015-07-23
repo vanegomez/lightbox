@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+# gem 'unicorn'
 gem 'instagram'
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
@@ -27,3 +28,6 @@ group :development, :test do
   gem 'capybara'
 end
 
+group :production do
+  gem 'pg'
+end
