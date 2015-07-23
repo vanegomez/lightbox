@@ -3,15 +3,15 @@
       <% current_user.feed.each do |feed_item| %>
       <div class="header">
       <h5 id="header_p"><%= link_to feed_item.user.username, "https://www.instagram.com/" + feed_item.user.username %></h5>
-        <p><%= time_ago_in_words(Time.at(feed_item.created_time.to_i)) %> ago</p>
+        <p><span class="time"><%= time_ago_in_words(Time.at(feed_item.created_time.to_i)) %> ago</span></p>
       </div>
         <div class="image">
           <%= image_tag feed_item.images.standard_resolution.url %>
         </div>
         <div class="comments">
-          <h5><%= feed_item.likes.values.first %> likes</h5>
+          <h5><span class="comment"><%= feed_item.likes.values.first %> likes</span></h5>
           <% feed_item.comments.data.each do |comment| %>
-            <P><%= comment.from.username %>: <%= comment.text %></P>
+            <P><strong><%= link_to comment.from.username, "https://www.instagram.com/" + comment.from.username %></strong> <span class="comment"><%= comment.text %></span></P>
           <% end %>
         </div>
     <% end %>

@@ -1,12 +1,13 @@
   <div class="user_post">
-    <h1><%= current_user.nickname %></h1>
+    <div class="user_profile">
+    <h1><span class="user"><%= current_user.nickname %></span></h1>
 
-    <ul>
-      <li><%= current_user.counts.media %> posts</li>
-      <li><%= current_user.counts.followed_by %> followers</li>
-      <li><%= current_user.counts.follows %> following</li>
-    </ul>
-
+      <ul>
+        <li><%= current_user.counts.media %> posts</li>
+        <li><%= current_user.counts.followed_by %> followers</li>
+        <li><%= current_user.counts.follows %> following</li>
+      </ul>
+    </div>
     <div class="image">
       <% current_user.recent_media.each do |image| %>
         <%= image_tag image.images.low_resolution.url %>
