@@ -15,7 +15,7 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import url(http://fonts.googleapis.com/css?family=Grand+Hotel);
+//@import url(http://fonts.googleapis.com/css?family=Grand+Hotel);
 
 
 body {
@@ -122,4 +122,22 @@ a {
 
 .user_profile {
 
+}
+
+.login {
+  padding-top: 20%;
+  position: relative;
+  margin: auto;
+  width: 100%;
+  padding-left: 40%;
+}
+
+.login h1 {
+  font-family: 'Grand Hotel', cursive;
+  font-size: 60px;
+
+}
+
+.button {
+ margin-left: 8%;
 }
