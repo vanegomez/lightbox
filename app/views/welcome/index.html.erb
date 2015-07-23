@@ -1,11 +1,22 @@
-<div class="container">
-  <% if current_user %>
-    <h1><%= current_user.name %>'s media feed</h1>
-    <% current_user.feed.each do |feed_item| %>
-      <p><%= feed_item.user.full_name %></p>
-      <%= image_tag feed_item.images.standard_resolution.url %>
+<% if current_user %>
+    <div class="post">
+      <% current_user.feed.each do |feed_item| %>
+      <div class="header">
+      <h5 id="header_p"><%= link_to feed_item.user.username, "https://www.instagram.com/" + feed_item.user.username %></h5>
+        <p><%= time_ago_in_words(Time.at(feed_item.created_time.to_i)) %> ago</p>
+      </div>
+        <div class="image">
+          <%= image_tag feed_item.images.standard_resolution.url %>
+        </div>
+        <div class="comments">
+          <h5><%= feed_item.likes.values.first %> likes</h5>
+          <% feed_item.comments.data.each do |comment| %>
+            <P><%= comment.from.username %>: <%= comment.text %></P>
+          <% end %>
+        </div>
     <% end %>
-  <% end %>
-</div>
+    </div>
+<% end %>
+
 
 

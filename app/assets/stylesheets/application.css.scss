@@ -22,12 +22,87 @@ body {
   background-color: #fafafa;
   font-family: 'Helvetica Neue';
   color: #125688;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-default .navbar-brand > a {
+  color: #125688;
+  padding: 25px;
+//  height: 70px;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #125688;
 }
 
 .navbar-brand {
   font-family: 'Grand Hotel', cursive;
+  font-size: 20px;
 }
 
-.vanessa-nav {
- background: red;
+.current-user {
+  top: 50px;
+  position: absolute;
 }
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline;
+  padding: 10px;
+}
+
+.container-fluid {
+  background-color: white;
+}
+
+.post {
+  padding-top: 20px;
+  position: relative;
+  margin: auto;
+  margin-top: 60px;
+  width: 640px;
+
+}
+
+.user_post {
+  padding-top: 20px;
+  position: relative;
+  margin: 0 auto 30px;
+  margin-top: 60px;
+  width: 80%;
+
+}
+
+.header {
+  background-color: white;
+  height: 64px;
+  padding: 14px 20px;
+  margin-top: 50px;
+  border: 1px solid #edeeee;
+}
+
+#header_p {
+  margin-bottom: 0px;
+}
+
+.comments {
+  background-color: white;
+  padding: 24px;
+  border: 1px solid #edeeee;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+}
+
+a {
+  color: #125688;
+  text-decoration: none;
+}
+
